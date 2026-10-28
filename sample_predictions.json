@@ -1,0 +1,87 @@
+[
+  {
+    "customer_id": "CUST_01496",
+    "prediction_date": "2026-01-15T00:00:00+00:00",
+    "horizon_months": 12,
+    "predicted_revenue": 9049.338747820824,
+    "currency": "USD",
+    "model_version": "clv-gbt-v1.0",
+    "data_quality_status": "ok",
+    "uncertainty_lower": 7239.47099825666,
+    "uncertainty_upper": 10859.206497384988,
+    "top_factors": [
+      "plan",
+      "tenure_months",
+      "region"
+    ],
+    "analytics_view_url": "https://analytics.example.com/clv/CUST_00001"
+  },
+  {
+    "customer_id": "CUST_01497",
+    "prediction_date": "2026-01-15T00:00:00+00:00",
+    "horizon_months": 12,
+    "predicted_revenue": 1991.6708148132075,
+    "currency": "USD",
+    "model_version": "clv-gbt-v1.0",
+    "data_quality_status": "ok",
+    "uncertainty_lower": 1593.336651850566,
+    "uncertainty_upper": 2390.004977775849,
+    "top_factors": [
+      "plan",
+      "tenure_months",
+      "region"
+    ],
+    "analytics_view_url": "https://analytics.example.com/clv/CUST_00001"
+  },
+  {
+    "customer_id": "CUST_01498",
+    "prediction_date": "2026-01-15T00:00:00+00:00",
+    "horizon_months": 12,
+    "predicted_revenue": 200.70185702901767,
+    "currency": "USD",
+    "model_version": "clv-gbt-v1.0",
+    "data_quality_status": "ok",
+    "uncertainty_lower": 160.56148562321414,
+    "uncertainty_upper": 240.8422284348212,
+    "top_factors": [
+      "plan",
+      "tenure_months",
+      "region"
+    ],
+    "analytics_view_url": "https://analytics.example.com/clv/CUST_00001"
+  },
+  {
+    "customer_id": "CUST_01499",
+    "prediction_date": "2026-01-15T00:00:00+00:00",
+    "horizon_months": 12,
+    "predicted_revenue": 1798.0349569955504,
+    "currency": "USD",
+    "model_version": "clv-gbt-v1.0",
+    "data_quality_status": "ok",
+    "uncertainty_lower": 1438.4279655964403,
+    "uncertainty_upper": 2157.64194839466,
+    "top_factors": [
+      "plan",
+      "tenure_months",
+      "region"
+    ],
+    "analytics_view_url": "https://analytics.example.com/clv/CUST_00001"
+  },
+  {
+    "customer_id": "CUST_01500",
+    "prediction_date": "2026-01-15T00:00:00+00:00",
+    "horizon_months": 12,
+    "predicted_revenue": 1703.7380335606908,
+    "currency": "USD",
+    "model_version": "clv-gbt-v1.0",
+    "data_quality_status": "ok",
+    "uncertainty_lower": 1362.9904268485527,
+    "uncertainty_upper": 2044.485640272829,
+    "top_factors": [
+      "plan",
+      "tenure_months",
+      "region"
+    ],
+    "analytics_view_url": "https://analytics.example.com/clv/CUST_00001"
+  }
+]

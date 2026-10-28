@@ -1,0 +1,55 @@
+# CLV Prediction configuration (PRD Section 7-9)
+# Agree target definition with Finance before training (PRD Section 7, Acceptance Criteria)
+
+target:
+  horizon_months: 12                # MVP: next 12 months net revenue
+  target_name: clv_12m_net_revenue  # target column name
+  currency: USD
+
+data:
+  customer_id_column: customer_id
+  prediction_date_column: prediction_date
+  revenue_column: net_revenue
+
+features:
+  # Feature groups (PRD Section 7)
+  subscription: [tenure_months, plan, billing_interval, plan_changes, pause_resume_count, renewal_date]
+  billing: [recurring_amount, successful_payments, failed_payments, discounts, refunds, add_on_revenue, payment_frequency]
+  engagement: [login_frequency, feature_usage, usage_recency_days, support_interactions, onboarding_completed]
+  acquisition: [acquisition_channel, campaign, customer_segment, region]
+
+data_quality:
+  flag_missing: true
+  flag_stale_days: 30
+  flag_duplicates: true
+  flag_inconsistent: true
+
+validation:
+  train_end: "2024-12-31"
+  validation_end: "2025-06-30"
+  test_end: "2025-12-31"
+  n_rolling_folds: 3
+  train_months: 12
+  validation_months: 3
+  test_months: 3
+
+model:
+  name: clv-gbt
+  version: "1.0.0"
+  algorithm: gradient_boosted_trees   # or regularized_linear
+  hyperparameters:
+    n_estimators: 300
+    learning_rate: 0.05
+    max_depth: 4
+    subsample: 0.8
+    random_state: 42
+
+metrics:
+  acceptance_mae_usd: 300.0         # set after baseline established (PRD Section 9)
+  acceptance_wape: 0.15             # 15% aggregate error tolerance
+  top_fraction_for_lift: 0.2
+
+output:
+  prediction_record_format: json
+  include_uncertainty: true
+  top_factors: [plan, tenure_months, acquisition_channel, region]

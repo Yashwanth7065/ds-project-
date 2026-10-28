@@ -1,0 +1,15 @@
+[
+  {
+    "customer_id": "CUST_01999",
+    "prediction_date": "2025-12-14T18:30:00+00:00",
+    "horizon_months": 12,
+    "predicted_revenue": 1960.0439723154477,
+    "currency": "USD",
+    "model_version": "clv-gbt-v1.0.0",
+    "data_quality_status": "ok",
+    "uncertainty_lower": null,
+    "uncertainty_upper": null,
+    "top_factors": [],
+    "analytics_view_url": null
+  }
+]
